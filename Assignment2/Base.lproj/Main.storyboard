@@ -1,22 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLN-gp-3BZ">
+                                <rect key="frame" x="191" y="58" width="219" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGV-rZ-xfp">
+                                <rect key="frame" x="380" y="96" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hex">
+                                    <color key="titleColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hexClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Uz-Wz-wRH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bA-G4-0V1">
+                                <rect key="frame" x="275" y="96" width="51" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Binary">
+                                    <color key="titleColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="binaryClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ZM-2D-XbD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-Ot-gva">
+                                <rect key="frame" x="191" y="96" width="59" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Decimal">
+                                    <color key="titleColor" white="0.5966796875" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="decimalClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLK-sx-7h5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9bA-G4-0V1" firstAttribute="top" secondItem="PLN-gp-3BZ" secondAttribute="bottom" constant="8" id="0cQ-V0-sm9"/>
+                            <constraint firstAttribute="centerX" secondItem="PLN-gp-3BZ" secondAttribute="centerX" constant="-0.5" id="Mh0-3L-Muf"/>
+                            <constraint firstItem="9bA-G4-0V1" firstAttribute="leading" secondItem="Qgm-Ot-gva" secondAttribute="trailing" constant="25" id="OFa-Vu-f0r"/>
+                            <constraint firstItem="9bA-G4-0V1" firstAttribute="width" secondItem="Qgm-Ot-gva" secondAttribute="width" id="RcQ-DR-ypq"/>
+                            <constraint firstItem="PLN-gp-3BZ" firstAttribute="leading" secondItem="Qgm-Ot-gva" secondAttribute="leading" id="SEK-v3-v6U"/>
+                            <constraint firstItem="Qgm-Ot-gva" firstAttribute="top" secondItem="PLN-gp-3BZ" secondAttribute="bottom" constant="8" id="ZVK-lL-gks"/>
+                            <constraint firstItem="9bA-G4-0V1" firstAttribute="width" secondItem="kGV-rZ-xfp" secondAttribute="width" id="ZeM-5f-dzd"/>
+                            <constraint firstItem="9bA-G4-0V1" firstAttribute="centerX" secondItem="PLN-gp-3BZ" secondAttribute="centerX" id="ZsV-04-wMa"/>
+                            <constraint firstItem="PLN-gp-3BZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="eET-1v-Coo"/>
+                            <constraint firstItem="PLN-gp-3BZ" firstAttribute="trailing" secondItem="kGV-rZ-xfp" secondAttribute="trailing" id="fs9-rx-wer"/>
+                            <constraint firstItem="kGV-rZ-xfp" firstAttribute="top" secondItem="PLN-gp-3BZ" secondAttribute="bottom" constant="8" id="xwW-23-c0Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="binaryButton" destination="9bA-G4-0V1" id="FKb-vD-TcW"/>
+                        <outlet property="decimalButton" destination="Qgm-Ot-gva" id="79U-ce-ZV8"/>
+                        <outlet property="hexButton" destination="kGV-rZ-xfp" id="4vo-AS-0kU"/>
+                        <outlet property="numberView" destination="PLN-gp-3BZ" id="w09-fI-hYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
