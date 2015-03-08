@@ -15,7 +15,7 @@ class BaseConverterTest: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
@@ -31,21 +31,21 @@ class BaseConverterTest: XCTestCase {
     }
 
     func testFromHex() {
-        XCTAssert(converter.toDecimal("h", numberStr: "ff") == 255)
-        XCTAssert(converter.toDecimal("h", numberStr: "1ab") == 427)
-        XCTAssert(converter.toDecimal("h", numberStr: "c") == 12)
-        XCTAssert(converter.toDecimal("h", numberStr: "xff") == nil && converter.error == BaseConverter.BaseConvertError.INVALID_CHAR)
+        XCTAssert(converter.toDecimal("h", numberStr: "FF") == 255)
+        XCTAssert(converter.toDecimal("h", numberStr: "1AB") == 427)
+        XCTAssert(converter.toDecimal("h", numberStr: "C") == 12)
+        XCTAssert(converter.toDecimal("h", numberStr: "XFF") == nil && converter.error == BaseConverter.BaseConvertError.INVALID_CHAR)
     }
-    
+
     func testToHex() {
         var result : String? = converter.fromDecimal("h", num: 255)
-        XCTAssert(result == "ff", String(result!))
+        XCTAssert(result == "FF", String(result!))
         result = converter.fromDecimal("h", num: 427)
-        XCTAssert(result == "1ab", String(result!))
+        XCTAssert(result == "1AB", String(result!))
         result = converter.fromDecimal("h", num: 12)
-        XCTAssert(result == "c", String(result!))
+        XCTAssert(result == "C", String(result!))
     }
-    
+
     func testToBinary() {
         var result : String? = converter.fromDecimal("b", num: 7)
         XCTAssert(result == "111", String(result!))

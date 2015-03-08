@@ -12,7 +12,6 @@
 		722FD2431A9F260D00C6BD96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722FD2411A9F260D00C6BD96 /* Main.storyboard */; };
 		722FD2451A9F260D00C6BD96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722FD2441A9F260D00C6BD96 /* Images.xcassets */; };
 		722FD2481A9F260D00C6BD96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722FD2461A9F260D00C6BD96 /* LaunchScreen.xib */; };
-		722FD2541A9F260D00C6BD96 /* Assignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD2531A9F260D00C6BD96 /* Assignment2Tests.swift */; };
 		722FD25E1A9F26CD00C6BD96 /* BaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD25D1A9F26CD00C6BD96 /* BaseConverter.swift */; };
 		722FD25F1A9F26CD00C6BD96 /* BaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD25D1A9F26CD00C6BD96 /* BaseConverter.swift */; };
 		722FD2611A9F26DE00C6BD96 /* BaseConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD2601A9F26DE00C6BD96 /* BaseConverterTest.swift */; };
@@ -38,7 +37,6 @@
 		722FD2471A9F260D00C6BD96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		722FD24D1A9F260D00C6BD96 /* Assignment2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		722FD2521A9F260D00C6BD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		722FD2531A9F260D00C6BD96 /* Assignment2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2Tests.swift; sourceTree = "<group>"; };
 		722FD25D1A9F26CD00C6BD96 /* BaseConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConverter.swift; sourceTree = "<group>"; };
 		722FD2601A9F26DE00C6BD96 /* BaseConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConverterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				722FD2601A9F26DE00C6BD96 /* BaseConverterTest.swift */,
-				722FD2531A9F260D00C6BD96 /* Assignment2Tests.swift */,
 				722FD2511A9F260D00C6BD96 /* Supporting Files */,
 			);
 			path = Assignment2Tests;
@@ -229,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722FD2541A9F260D00C6BD96 /* Assignment2Tests.swift in Sources */,
 				722FD2611A9F26DE00C6BD96 /* BaseConverterTest.swift in Sources */,
 				722FD25F1A9F26CD00C6BD96 /* BaseConverter.swift in Sources */,
 			);
@@ -417,6 +413,7 @@
 				722FD2591A9F260D00C6BD96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		722FD25A1A9F260D00C6BD96 /* Build configuration list for PBXNativeTarget "Assignment2Tests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +422,7 @@
 				722FD25C1A9F260D00C6BD96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
