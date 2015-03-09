@@ -12,7 +12,7 @@ class BaseConverter {
     // Maps base identifiers to lists of digits.
     let bases : [Character : [Character]] = [
         "b": ["0", "1"],
-        "h": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"],
+        "h": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"],
         "d": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     ];
 
@@ -30,8 +30,10 @@ class BaseConverter {
 
             var number : Int = 0
             var power : Int = 1
+            
+            let lowerNumberStr = numberStr.lowercaseString
 
-            for c : Character in reverse(numberStr) {
+            for c : Character in reverse(lowerNumberStr) {
                 if let idx = find(digits, c) {
                     // power is the current power (ex 16^1, 16^2, etc)
                     // idx is the current index into the digit array (conveniently the actual decimal
@@ -72,7 +74,8 @@ class BaseConverter {
             }
             
             // This algorithm gives the reverse of the digits
-            return String(reverse(numStr))
+            // Always output uppercase
+            return String(reverse(numStr)).uppercaseString
         }
         else {
             error = BaseConvertError.INVALID_BASE
